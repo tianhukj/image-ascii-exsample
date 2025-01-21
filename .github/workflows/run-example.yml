@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ascii-art
-        path: /ascii_art.txt  # 替换为你的图片路径
+        path: ascii_art.txt  # 替换为你的图片路径

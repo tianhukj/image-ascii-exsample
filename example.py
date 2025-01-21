@@ -1,5 +1,5 @@
 import os
-from asciimj import AsciiMJ
+import asciimj
 from PIL import Image
 
 def image_to_ascii(image_path, output_width=100):
@@ -7,7 +7,7 @@ def image_to_ascii(image_path, output_width=100):
     image = Image.open(image_path)
     
     # 创建AsciiMJ对象
-    ascii_mj = AsciiMJ(image, output_width)
+    ascii_mj = asciimj(image, output_width)
     
     # 获取ASCII艺术字符串
     ascii_art = ascii_mj.to_ascii()

@@ -44,3 +44,6 @@ if __name__ == "__main__":
 ```bash
 @echo off && pip install image-ascii && set /p img_path="Enter image path: " && python -c "import os; from image_ascii import convert_image_to_ascii; img_path='%img_path%'; ascii_art = convert_image_to_ascii(img_path, new_width=100); output_path = os.path.join(os.path.dirname(img_path), 'ascii_art.txt'); open(output_path, 'w').write(ascii_art); print(f'ASCII art saved to {output_path}')"
 ```
+
+## 使用 MIT 许可证
+该项目使用 MIT 许可证。详细信息请参阅 ![LICENSE](./LICENSE) 文件。

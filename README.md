@@ -43,4 +43,4 @@ To simplify the user experience, you can use the following one-line bat command 
 ```
 
 ## MIT License
-This project is licensed under the MIT ![LICENSE](./License). For more details, please refer to the LICENSE file.
+This project is licensed under the MIT ![LICENSE](https://github.com/tianhukj/image-ascii-exsample/blob/main/LICENSE). For more details, please refer to the LICENSE file.

@@ -1,5 +1,5 @@
 import os
-from image_ascii import convert_image_to_ascii
+from image-ascii import convert_image_to_ascii
 
 def main():
     image_path = "image.JPG"  # 根目录下的图片路径

@@ -18,9 +18,15 @@ def convert_to_grayscale(image):
 def map_pixels_to_ascii_chars(image, range_width=25):
     """将像素映射到ASCII字符"""
     pixels = list(image.getdata())
-    ascii_str = "".join([ASCII_CHARS[pixel // range_width] for pixel in pixels])
+    ascii_str = ""
+    for pixel in pixels:
+        index = pixel // range_width
+        # 确保索引在ASCII_CHARS范围内
+        if index >= len(ASCII_CHARS):
+            index = len(ASCII_CHARS) - 1
+        ascii_str += ASCII_CHARS[index]
     return ascii_str
-    
+
 def convert_image_to_ascii(image_path, new_width=100):
     """将图像转换为ASCII艺术"""
     try:
@@ -42,12 +48,12 @@ def convert_image_to_ascii(image_path, new_width=100):
     img_width = image.width
     ascii_str_len = len(ascii_str)
     ascii_img = "\n".join([ascii_str[index: index + img_width] for index in range(0, ascii_str_len, img_width)])
-
+    
     return ascii_img
 
 def main():
     # 在这里定义图片文件的路径
-    image_path = "image.jpg"  # 请替换为你的图片路径
+    image_path = "/image.jpg"  # 请替换为你的图片路径
     
     # 检查输入的路径是否有效
     if not os.path.isfile(image_path):
@@ -56,7 +62,7 @@ def main():
 
     # 将图片转换为 ASCII 艺术
     ascii_art = convert_image_to_ascii(image_path, new_width=100)
-
+    
     if ascii_art:
         # 获取图片文件所在的目录
         image_dir = os.path.dirname(image_path)
@@ -72,4 +78,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

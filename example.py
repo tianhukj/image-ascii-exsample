@@ -53,7 +53,7 @@ def convert_image_to_ascii(image_path, new_width=100):
 
 def main():
     # 在这里定义图片文件的路径
-    image_path = "/image.jpg"  # 请替换为你的图片路径
+    image_path = "image.jpg"  # 请替换为你的图片路径
     
     # 检查输入的路径是否有效
     if not os.path.isfile(image_path):

@@ -23,3 +23,9 @@ jobs:
 
     - name: Run image to ASCII script
       run: python example.py
+
+    - name: Upload ASCII art file
+      uses: actions/upload-artifact@v3
+      with:
+        name: ascii-art
+        path: image.txt  # 替换为你的实际 .txt 文件路径

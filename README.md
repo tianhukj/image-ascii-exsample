@@ -1,5 +1,7 @@
 # ASCII Art Converter
 
+[English](README.md) | [中文](README-CN.md)
+
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub followers](https://img.shields.io/github/followers/tianhukj.svg?style=social&label=Follow)
 ![GitHub stars](https://img.shields.io/github/stars/tianhukj/image-ascii-exsample.svg?style=social&label=Star)
@@ -43,4 +45,4 @@ To simplify the user experience, you can use the following one-line bat command 
 ```
 
 ## MIT License
-This project is licensed under the MIT ![LICENSE](https://github.com/tianhukj/image-ascii-exsample/blob/main/LICENSE). For more details, please refer to the LICENSE file.
+This project is licensed under the MIT [LICENSE](LICENSE). For more details, please refer to the LICENSE file.

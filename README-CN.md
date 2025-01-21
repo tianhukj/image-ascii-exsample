@@ -48,4 +48,4 @@ if __name__ == "__main__":
 ```
 
 ## 使用 MIT 许可证
-该项目使用 MIT 许可证。详细信息请参阅 ![LICENSE](./LICENSE) 文件。
+该项目使用 MIT 许可证。详细信息请参阅 [LICENSE](LICENSE) 文件。

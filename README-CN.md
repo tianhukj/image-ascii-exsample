@@ -37,3 +37,10 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+### Windows 一键启动代码
+为了简化用户体验，你可以使用以下一行 bat 命令来安装所需的 Python 包，并提示用户输入图片路径，然后自动进行转换并将结果保存到同一路径下的 ascii_art.txt 文件中：
+
+```bash
+@echo off && pip install image-ascii && set /p img_path="Enter image path: " && python -c "import os; from image_ascii import convert_image_to_ascii; img_path='%img_path%'; ascii_art = convert_image_to_ascii(img_path, new_width=100); output_path = os.path.join(os.path.dirname(img_path), 'ascii_art.txt'); open(output_path, 'w').write(ascii_art); print(f'ASCII art saved to {output_path}')"
+```

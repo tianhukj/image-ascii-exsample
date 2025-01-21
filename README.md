@@ -36,3 +36,8 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+### One-Click Windows Startup Code
+To simplify the user experience, you can use the following one-line bat command to install the required Python package and prompt the user to enter the image path, then automatically perform the conversion and save the result to ascii_art.txt in the same path:
+```bash
+@echo off && pip install image-ascii && set /p img_path="Enter image path: " && python -c "import os; from image_ascii import convert_image_to_ascii; img_path='%img_path%'; ascii_art = convert_image_to_ascii(img_path, new_width=100); output_path = os.path.join(os.path.dirname(img_path), 'ascii_art.txt'); open(output_path, 'w').write(ascii_art); print(f'ASCII art saved to {output_path}')"
+```

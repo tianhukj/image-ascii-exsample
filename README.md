@@ -41,3 +41,6 @@ To simplify the user experience, you can use the following one-line bat command 
 ```bash
 @echo off && pip install image-ascii && set /p img_path="Enter image path: " && python -c "import os; from image_ascii import convert_image_to_ascii; img_path='%img_path%'; ascii_art = convert_image_to_ascii(img_path, new_width=100); output_path = os.path.join(os.path.dirname(img_path), 'ascii_art.txt'); open(output_path, 'w').write(ascii_art); print(f'ASCII art saved to {output_path}')"
 ```
+
+## MIT License
+This project is licensed under the MIT ![LICENSE](./License). For more details, please refer to the LICENSE file.

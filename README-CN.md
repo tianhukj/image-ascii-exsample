@@ -68,7 +68,7 @@ if __name__ == "__main__":
         print(f"ASCII 艺术已保存到 {output_path}")
 ```
 
-For details, see [exsample.py](example.py)
+更多可参阅 [exsample.py](example.py)
 
 ### Windows 一键启动代码
 为了简化用户体验，你可以使用以下一行 bat 命令来安装所需的 Python 包，并提示用户输入图片路径，然后自动进行转换并将结果保存到同一路径下的 ascii_art.txt 文件中：

@@ -1,34 +1,51 @@
 @echo off
-cls
+SETLOCAL ENABLEDELAYEDEXPANSION
 
-:: 设置蓝色文本颜色
-echo [34m
-echo _                                                 _ _ 
-echo (_)_ __ ___   __ _  __ _  ___        __ _ ___  ___(_|_)
-echo | | '_ ` _ \ / _` |/ _` |/ _ \_____ / _` / __|/ __| | |
-echo | | | | | | | (_| | (_| |  __/_____| (_| \__ \ (__| | |
-echo |_|_| |_| |_|\__,_|\__, |\___|      \__,_|___/\___|_|_|
-echo                   |___/
-echo [0m
-
+:: 显示ASCII艺术
+echo    _    ____   ____ ___ ___ __  __     _ 
+echo   / \  / ___| / ___|_ _|_ _|  \/  |   | |
+echo  / _ \ \___ \| |    | | | || |\/| |_  | |
+echo / ___ \ ___) | |___ | | | || |  | | |_| |
+echo /_/   \_\____/ \____|___|___|_|  |_|\___/ 
 echo.
 
-:input
-set /p image_path="Please enter the path to the image file: "
+:: 安装 asciimj 包
+pip install asciimj
 
-if "%image_path%"=="" (
-    echo You must provide a valid image path.
-    goto input
+:: 提示用户输入图片路径
+set /p imgPath="请输入图片的路径: "
+
+:: 检查图片路径是否存在
+if not exist "%imgPath%" (
+    echo 图片路径不存在，请检查后重试。
+    pause
+    exit /b
 )
 
-:: Get the directory of the image file
-for %%f in ("%image_path%") do set image_dir=%%~dpf
+:: 获取图片文件的目录和文件名（不包括扩展名）
+for %%F in ("%imgPath%") do (
+    set imgDir=%%~dpF
+    set imgName=%%~nF
+)
 
-echo Installing image-ascii package...
-pip install image-ascii==0.1.0
+:: 生成输出的TXT文件路径
+set outputFile=%imgDir%%imgName%.txt
 
-echo Converting image to ASCII art and saving to file...
-python -c "from image_ascii.convert import convert_image_to_ascii; import os; image_path = r'%image_path%'; output_path = os.path.join(r'%image_dir%', 'ascii_art.txt'); ascii_art = convert_image_to_ascii(image_path, new_width=100); with open(output_path, 'w') as f: f.write(ascii_art); print(f'ASCII art saved to {output_path}')"
+:: 创建一个Python脚本来转换图片为ASCII并保存为TXT
+echo import sys > convert.py
+echo from asciimj import convert_image_to_ascii >> convert.py
+echo img_path = sys.argv[1] >> convert.py
+echo output_path = sys.argv[2] >> convert.py
+echo with open(output_path, 'w') as f: >> convert.py
+echo     ascii_art = convert_image_to_ascii(img_path) >> convert.py
+echo     f.write(ascii_art) >> convert.py
 
-echo.
+:: 运行Python脚本
+python convert.py "%imgPath%" "%outputFile%"
+
+:: 删除临时的Python脚本
+del convert.py
+
+:: 打印输出目录
+echo 转换完成，ASCII艺术已保存到: %outputFile%
 pause

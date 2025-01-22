@@ -41,7 +41,7 @@ if __name__ == "__main__":
 ### One-Click Windows Startup Code
 To simplify the user experience, you can use the following one-line bat command to install the required Python package and prompt the user to enter the image path, then automatically perform the conversion and save the result to ascii_art.txt in the same path:
 
-For details, see a.bat
+For details, see run_image_ascii.bat
 
 ## MIT License
 This project is licensed under the MIT [LICENSE](LICENSE). For more details, please refer to the LICENSE file.

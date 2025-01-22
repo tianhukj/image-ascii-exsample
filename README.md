@@ -2,9 +2,17 @@
 
 [English](README.md) | [中文](README-CN.md)
 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+![GitHub license](https://img.shields.io/badge/license-MIT-yello.svg)
 ![GitHub followers](https://img.shields.io/github/followers/tianhukj.svg?style=social&label=Follow)
 ![GitHub stars](https://img.shields.io/github/stars/tianhukj/image-ascii-exsample.svg?style=social&label=Star)
+[![PyPI version](https://badge.fury.io/py/image-ascii-exsample.svg)](https://badge.fury.io/py/image-ascii)
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
+[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/yourusername/image-ascii/issues)
+![Commit Activity](https://img.shields.io/github/commit-activity/y/tianhukj/image-ascii-exsample)
+![GitHub Watchers](https://img.shields.io/github/watchers/tianhukj/image-ascii-exsample?style=social)
+[![Buy Me a Coffee](https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-FF813F.svg?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/tianhukj)
+
 
 ## Project Introduction
 

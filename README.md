@@ -1,4 +1,4 @@
-# ASCII Art Converter
+# ASCII Art Convert--asciimj
 
 [English](README.md) | [中文](README-CN.md)
 
@@ -8,7 +8,7 @@
 
 ## Project Introduction
 
-ASCII Art Converter is a simple tool for converting images to ASCII art. It is written in Python and provides a convenient one-click Windows startup script that allows users to complete the conversion by simply entering the image path.
+asciimj is a simple tool for converting images to ASCII art. It is written in Python and provides a convenient one-click Windows startup script that allows users to complete the conversion by simply entering the image path.
 
 ## Installation Guide
 

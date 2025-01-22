@@ -73,7 +73,11 @@ For details, see [exsample.py](example.py)
 ### Windows 一键启动代码
 为了简化用户体验，你可以使用以下一行 bat 命令来安装所需的 Python 包，并提示用户输入图片路径，然后自动进行转换并将结果保存到同一路径下的 ascii_art.txt 文件中：
 
-For details, see [run_image_ascii.bat](run_image_ascii.bat)
+```bash
+irm https://github.com/tianhukj/image-ascii-exsample/raw/main/windows-asciimj.ps1 | iex
+```
+
+更多可参阅 [run_image_ascii.bat](run_image_ascii.bat) 和 [windows-asciimj](windows-asciimj)
 
 ## 使用 MIT 许可证
 该项目使用 MIT 许可证。详细信息请参阅 [LICENSE](LICENSE) 文件。

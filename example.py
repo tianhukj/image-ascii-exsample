@@ -17,7 +17,7 @@ def save_ascii_to_file(ascii_art, output_path):
 
 if __name__ == "__main__":
     # 直接在代码中输入图像路径
-    image_path = "path/to/your/image.jpg"  # 替换为你的图像路径
+    image_path = "image.jpg"  # 替换为你的图像路径
     
     # 检查文件是否存在
     if not os.path.isfile(image_path):

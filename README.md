@@ -17,7 +17,7 @@ ASCII Art Converter is a simple tool for converting images to ASCII art. It is w
 First, make sure you have Python and `pip` installed. Then run the following command to install the required dependencies:
 
 ```bash
-pip install image-ascii
+pip install asciimj
 ```
 
 ### Example  Code

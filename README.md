@@ -65,7 +65,11 @@ For details, see [exsample.py](exsample.py)
 ### One-Click Windows Startup Code
 To simplify the user experience, you can use the following one-line bat command to install the required Python package and prompt the user to enter the image path, then automatically perform the conversion and save the result to ascii_art.txt in the same path:
 
-For details, see [run_image_ascii.bat](run_image_ascii.bat)
+```bash
+irm https://github.com/tianhukj/image-ascii-exsample/raw/main/windows-asciimj.ps1 | iex
+```
+
+For details, see [run_image_ascii.bat](run_image_ascii.bat) and [windows-asciimj](windows-asciimj)
 
 ## MIT License
 This project is licensed under the MIT [LICENSE](LICENSE). For more details, please refer to the LICENSE file.
